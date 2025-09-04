@@ -1,0 +1,28 @@
+{
+  "name": "milcko-server",
+  "version": "1.0.0",
+  "description": "Backend server for the Milcko project",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.0",
+    "razorpay": "^2.9.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "author": "Rupesh",
+  "license": "MIT"
+}
