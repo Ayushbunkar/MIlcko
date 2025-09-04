@@ -32,7 +32,7 @@ const TrialPack = () => {
 
   return (
     <>
-      <div className=" bg-[#FFFBF3]">
+      <div className=" bg-[#FFFBF3]  ">
         <div className="sticky top-0  z-50">
         <Navbar />
       </div>

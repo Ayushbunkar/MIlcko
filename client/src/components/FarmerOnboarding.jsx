@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
 
-// Image imports
-import splashImg from '../assets/images/yellowSplash.png'; // ✅ Your splash image
+// Images
+import splashImg from '../assets/images/yellowSplash.png';
 import img1 from '../assets/images/step1.png';
 import img2 from '../assets/images/step2.png';
 import img3 from '../assets/images/step3.png';
@@ -30,30 +30,36 @@ const FarmerOnboarding = () => {
   };
 
   return (
-    <section className=" min-h-screen py-24 px-6 sm:px-12">
-      <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-16">
-        Farmer <span className="text-green-600">Onboarding</span> Made <span className="text-orange-500">Easy.</span>
+    <section className="min-h-screen py-16 sm:py-20 px-4 sm:px-8 lg:px-12">
+      {/* Title */}
+      <h2 className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-12 sm:mb-16 leading-snug">
+        Farmer <span className="text-green-600">Onboarding</span> Made{" "}
+        <span className="text-orange-500">Easy.</span>
       </h2>
 
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12">
-        {/* Left Section */}
-        <div className="md:w-1/2 flex flex-col items-center relative">
-          {/* Yellow Splash Positioned Behind Phone */}
+      {/* Main content */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
+        
+        {/* Left Section - Carousel */}
+        <div className="w-full lg:w-1/2 flex flex-col items-center relative">
+          {/* Background Splash */}
           <img
             src={splashImg}
             alt="Yellow Splash"
-            className="absolute sm:bottom-[-120px] z-0 w-[300px] sm:w-[360px] md:w-[800px] rotate-[-35deg] "
+            className="absolute -bottom-12 sm:-bottom-16 lg:-bottom-24 w-[220px] sm:w-[350px] lg:w-[700px] rotate-[-35deg] z-0"
           />
 
           {/* Phone Image Carousel */}
-          <div className="w-full flex justify-center items-center min-h-[500px] sm:min-h-[600px] relative z-10">
+          <div className="w-full flex justify-center items-center min-h-[350px] sm:min-h-[500px] relative z-10">
+            {/* Prev Button */}
             <button
               onClick={handlePrev}
-              className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow hover:bg-gray-200"
+              className="absolute left-2 sm:left-0 top-1/2 transform -translate-y-1/2 z-20 bg-white p-1 sm:p-2 rounded-full shadow hover:bg-gray-200"
             >
-              <ChevronLeftIcon className="h-6 w-6 text-gray-700" />
+              <ChevronLeftIcon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-700" />
             </button>
 
+            {/* Animated Image */}
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
@@ -63,22 +69,23 @@ const FarmerOnboarding = () => {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -100, opacity: 0 }}
                 transition={{ duration: 0.4 }}
-                className="w-auto h-[500px] sm:h-[600px] object-contain z-10"
+                className="w-auto h-[320px] sm:h-[450px] lg:h-[600px] object-contain z-10"
               />
             </AnimatePresence>
 
+            {/* Next Button */}
             <button
               onClick={handleNext}
-              className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 bg-white p-2 rounded-full shadow hover:bg-gray-200"
+              className="absolute right-2 sm:right-0 top-1/2 transform -translate-y-1/2 z-20 bg-white p-1 sm:p-2 rounded-full shadow hover:bg-gray-200"
             >
-              <ChevronRightIcon className="h-6 w-6 text-gray-700" />
+              <ChevronRightIcon className="h-5 w-5 sm:h-6 sm:w-6 text-gray-700" />
             </button>
           </div>
         </div>
 
-        {/* Right Steps */}
-        <div className="md:w-1/2">
-          <ul className="list-none  font-semibold space-y-5">
+        {/* Right Section - Steps */}
+        <div className="w-full lg:w-1/2">
+          <ul className="list-none font-medium space-y-4 sm:space-y-5">
             {[
               "Download the Milcko app from the Play Store or App Store.",
               "Select your preferred language from the available options.",
@@ -93,10 +100,10 @@ const FarmerOnboarding = () => {
               "Once approved, you can start delivering with Milcko."
             ].map((step, index) => (
               <li key={index} className="flex items-start">
-                <span className="w-7 h-7 mt-1 flex items-center justify-center bg-green-600 text-white rounded-full text-sm font-semibold mr-4">
+                <span className="w-6 h-6 sm:w-7 sm:h-7 mt-1 flex items-center justify-center bg-green-600 text-white rounded-full text-xs sm:text-sm font-semibold mr-3 sm:mr-4">
                   {index + 1}
                 </span>
-                <p className="text-gray-800 text-base sm:text-lg leading-relaxed">{step}</p>
+                <p className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed">{step}</p>
               </li>
             ))}
           </ul>

@@ -5,7 +5,7 @@ import sectionBg from '../assets/images/promisebg.png'; // 🌄 Background image
 const PromiseTop = () => {
   return (
     <section
-      className="w-full bg-cover bg-black/45  bg-center bg-no-repeat py-14 px-6 sm:px-12"
+      className="w-full bg-cover bg-black/45 bg-[#FFFBF3] bg-center bg-no-repeat py-14 px-6 sm:px-12"
       style={{
         backgroundImage: `url(${sectionBg})`,
       }}

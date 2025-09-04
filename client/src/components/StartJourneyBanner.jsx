@@ -3,7 +3,7 @@ import React from 'react';
 import pic11 from '../assets/images/pic11.png';
 function StartJourneyBanner() {
   return (
-    <section className="bg-[#F5F3EF] font-sans py-16 sm:py-20">
+    <section className="bg-[#FAF3E8] font-sans py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
           

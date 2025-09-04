@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar';
 const PrivacyPolicy = () => {
   return (
     <>
-    <div className="bg-[#FFFBF3] font-sans text-black max-w-5xl mx-auto p-4 md:p-8">
+    <div className="bg-white font-sans text-black max-w-5xl mx-auto p-4 md:p-8">
    <div className="mb-15">
        <Navbar/>
    </div>
@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
       </header>
 
       {/* Policy Sections */}
-      <section className="space-y-10">
+      <section className="space-y-10 ">
         {/* Section: Information We Collect */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold">Information We Collect</h2>

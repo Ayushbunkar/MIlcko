@@ -19,7 +19,7 @@ const fadeIn = {
 
 const PremiumOfferings = () => {
   return (
-    <div className="bg-[#fefcf8] py-16 px-6 sm:px-10">
+    <div className="bg-[#FFFBF3] py-16 px-6 sm:px-10">
       <div className="max-w-7xl mx-auto text-center">
         <motion.h2
           initial="hidden"

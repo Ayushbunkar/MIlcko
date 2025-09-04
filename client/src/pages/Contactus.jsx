@@ -49,11 +49,11 @@ const Contactus = () => {
 
   return (
     <>
-      <div className="pt-7 bg-[#FFFBF3]  min-h-screen px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+      <div className="mt-20 bg-[#FFFBF3] mt-5  min-h-screen px-4 sm:px-6 lg:px-8 overflow-x-hidden">
         <Navbar />
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto mt-8 sm:mt-10 md:mt-12">
+        <div className="max-w-7xl mx-auto  sm:mt-1 md:mt-7">
           {/* Heading Section */}
           <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
@@ -66,7 +66,7 @@ const Contactus = () => {
             </p>
           </div>
           {/* Form and Image Container */}
-          <div className="flex flex-col  lg:flex-row items-center justify-between gap-8 sm:gap-10 lg:gap-12">
+          <div className="flex flex-col -mt-8  lg:flex-row items-center justify-between gap-8 sm:gap-10 lg:gap-12">
             {/* Contact Form */}
             <div className="bg-white w-[380px] h-[448px] mb-13 mx-auto p-2 pb-10 shadow-md rounded-xl border border-amber-200">
               <h2 className="text-lg font-semibold mb-5 text-gray-800">

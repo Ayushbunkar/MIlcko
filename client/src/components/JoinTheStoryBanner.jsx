@@ -8,7 +8,7 @@ const handsHoldingMilkUrl = 'https://i.imgur.com/uR2e4GD.png';
 function JoinTheStoryBanner() {
   return (
     // The background color is a light minty green, approximated from your image
-    <div className="bg-[#E8F9DE] font-sans py-16 px-4 mt-5 sm:px-6 lg:px-8">
+    <div className="bg-[#E8F9DE] font-sans py-16 px-4  sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-center gap-12">
         
         {/* --- Left Section: Illustration --- */}

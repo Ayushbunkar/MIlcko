@@ -35,7 +35,7 @@ const cardData = [
 
 function FarmsCommitment() {
   return (
-    <section className="bg-white font-sans py-16 sm:py-20">
+    <section className="bg-[#FAF3E8] font-sans py-16 sm:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* --- Heading Section --- */}
         <div className="text-center mb-12">

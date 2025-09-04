@@ -1,10 +1,11 @@
+
 // App.jsx
 import React, { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import { CartProvider } from "./contexts/CartContext";
 
-// Layout Components
+// Layout & Shared Components
 import Navbar from "./components/Navbar";
 import DashboardLayout from "./layouts/DashboardLayout";
 
@@ -12,13 +13,11 @@ import DashboardLayout from "./layouts/DashboardLayout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
-import ContactUs from "./pages/ContactUs";
+import ContactUs from "./pages/Contactus";
 import Products from "./pages/Products";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import ReturnRefundPolicy from "./pages/ReturnRefundPolicy";
-
-// Other public pages
 import AboutUs from "./pages/AboutUs";
 import TrialPack from "./pages/TrialPack";
 import FAQs from "./pages/FAQs";
@@ -42,21 +41,16 @@ import Activity from "./pages/Dashboard/Activity";
 import Settings from "./pages/Dashboard/Settings";
 import Support from "./pages/Dashboard/Support";
 
-// Protected Route Component
+// ✅ Protected Route
 const ProtectedRoute = ({ children }) => {
   const isAuthenticated = localStorage.getItem("token");
-  if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
-  }
-  return children;
+  return isAuthenticated ? children : <Navigate to="/login" replace />;
 };
 
 const App = () => {
-  // Track authentication state
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem("token"));
 
   useEffect(() => {
-    // Listen for login/logout changes
     const handleStorage = () => setIsAuthenticated(!!localStorage.getItem("token"));
     window.addEventListener("storage", handleStorage);
     return () => window.removeEventListener("storage", handleStorage);
@@ -65,210 +59,41 @@ const App = () => {
   return (
     <AuthProvider>
       <CartProvider>
-       
+        {/* ✅ Navbar always on top */}
+        <Navbar />
+
         <Routes>
-          {/* Public routes */}
-          <Route
-            path="/"
-            element={
-              <>
-           
-                <Home />
-              </>
-            }
-          />
+          {/* Public Routes */}
+          <Route path="/" element={<Home />} />
           <Route path="/milkfact" element={<MilkFact />} />
-          <Route
-            path="/contactus"
-            element={
-              <>
-            
-                <ContactUs />
-              </>
-            }
-          />
-          <Route
-            path="/products"
-            element={
-              <>
-            
-                <Products />
-              </>
-            }
-          />
-          <Route
-            path="/trial-pack"
-            element={
-              <>
-             
-                <TrialPack />
-              </>
-            }
-          />
-          <Route
-            path="/faqs"
-            element={
-              <>
-              
-                <FAQs />
-              </>
-            }
-          />
-          <Route
-            path="/about-us"
-            element={
-              <>
-      
-                <AboutUs />
-              </>
-            }
-          />
-          <Route
-            path="/our-farmers"
-            element={
-              <>
-         
-                <OurFarmers />
-              </>
-            }
-          />
-          <Route
-            path="/our-process"
-            element={
-              <>
-          
-                <OurProcess />
-              </>
-            }
-          />
-          <Route
-            path="/sustainability"
-            element={
-              <>
-        
-                <Sustainability />
-              </>
-            }
-          />
-          <Route
-            path="/careers"
-            element={
-              <>
-           
-                <Careers />
-              </>
-            }
-          />
-          <Route
-            path="/testimonials"
-            element={
-              <>
-        
-                <Testimonials />
-              </>
-            }
-          />
-          <Route
-            path="/delivery-areas"
-            element={
-              <>
-             
-                <DeliveryAreas />
-              </>
-            }
-          />
-          <Route
-            path="/terms-conditions"
-            element={
-              <>
-             
-                <TermsConditions />
-              </>
-            }
-          />
-          <Route
-            path="/privacy-policy"
-            element={
-              <>
-          
-                <PrivacyPolicy />
-              </>
-            }
-          />
-          <Route
-            path="/return-policy"
-            element={
-              <>
-              
-                <ReturnRefundPolicy />
-              </>
-            }
-          />
-          <Route
-            path="/milkfact"
-            element={
-              <>
-            
-                <MilkFact />
-              </>
-            }
-          />
-          <Route
-            path="/subscription"
-            element={
-              <>
-           
-                <Subscription />
-              </>
-            }
-          />
-          <Route
-            path="/gallery"
-            element={
-              <>
-            
-                <Gallery />
-              </>
-            }
-          />
-          <Route
-            path="/our-farms"
-            element={
-              <>
-            
-                <OurFarms />
-              </>
-            }
-          />
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/trial-pack" element={<TrialPack />} />
+          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/our-farmers" element={<OurFarmers />} />
+          <Route path="/our-process" element={<OurProcess />} />
+          <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/delivery-areas" element={<DeliveryAreas />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/return-policy" element={<ReturnRefundPolicy />} />
+          <Route path="/subscription" element={<Subscription />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/our-farms" element={<OurFarms />} />
 
-          {/* Authentication routes */}
-          <Route
-            path="/login"
-            element={
-              <>
-            
-                <Login />
-              </>
-            }
-          />
-          <Route
-            path="/register"
-            element={
-              <>
-              
-                <Register />
-              </>
-            }
-          />
+          {/* Auth Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
 
-          {/* Dashboard protected routes */}
+          {/* Dashboard (Protected) */}
           <Route
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <DashboardLayout>
-                  <Dashboard />
-                </DashboardLayout>
+                <DashboardLayout><Dashboard /></DashboardLayout>
               </ProtectedRoute>
             }
           />
@@ -276,9 +101,7 @@ const App = () => {
             path="/dashboard/activity"
             element={
               <ProtectedRoute>
-                <DashboardLayout>
-                  <Activity />
-                </DashboardLayout>
+                <DashboardLayout><Activity /></DashboardLayout>
               </ProtectedRoute>
             }
           />
@@ -286,9 +109,7 @@ const App = () => {
             path="/dashboard/settings"
             element={
               <ProtectedRoute>
-                <DashboardLayout>
-                  <Settings />
-                </DashboardLayout>
+                <DashboardLayout><Settings /></DashboardLayout>
               </ProtectedRoute>
             }
           />
@@ -296,51 +117,26 @@ const App = () => {
             path="/dashboard/support"
             element={
               <ProtectedRoute>
-                <DashboardLayout>
-                  <Support />
-                </DashboardLayout>
+                <DashboardLayout><Support /></DashboardLayout>
               </ProtectedRoute>
             }
           />
 
-          {/* Cart routes */}
-          <Route
-            path="/cart"
-            element={
-              <>
-            
-                <Cart />
-              </>
-            }
-          />
+          {/* Cart Routes */}
+          <Route path="/cart" element={<Cart />} />
           <Route
             path="/checkout"
             element={
               <ProtectedRoute>
-                <>
-          
-                  <Checkout />
-                </>
+                <Checkout />
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/order-success"
-            element={
-              <>
-             
-                <OrderSuccess />
-              </>
-            }
-          />
-
-          <Route path="/Navbar" element={<Navbar />} />
+          <Route path="/order-success" element={<OrderSuccess />} />
         </Routes>
       </CartProvider>
-      
     </AuthProvider>
   );
 };
 
 export default App;
-

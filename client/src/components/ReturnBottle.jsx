@@ -2,7 +2,7 @@ import React from "react";
 
 const ReturnBottle = () => {
   return (
-    <section className="bg-white py-12 ">
+    <section className="bg-[#FAF3E8] ">
      
       {/* New Section: Remember These Guidelines */}
       <div className="mt-16 max-w-8xl mx-auto bg-[#F6F4EB] rounded-2xl p-8 shadow-md">

@@ -1,33 +1,45 @@
-import React from 'react';
-import processImage from '../assets/images/Steps.png'; 
-import ExperienceMilcko from '../components/ExperienceMilcko';
-import Footer from '../components/Footer';
+import React from "react";
+import processImage from "../assets/images/Steps.png"; 
+import ExperienceMilcko from "../components/ExperienceMilcko";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar"; // ✅ Import your Navbar
+
 const OurProcess = () => {
   return (
-    <section className="w-full mt-30bg-[#FFFBF3] py-0 px-0 sm:px-0 min-h-screen" id="our-process">
-      <div className="max-w-6xl mx-auto text-center">
-        
+    <section
+      className="w-full bg-[#FFFBF3] mt-10 py-0 px-0 min-h-screen overflow-x-hidden"
+      id="our-process"
+    >
+      {/* ✅ Navbar at the top */}
+      <Navbar />
+
+      {/* ✅ Main Content */}
+  <div className="max-w-6xl mt-6 mx-auto text-center px-2 xs:px-4 sm:px-6 lg:px-8 py-8 xs:py-12 sm:py-16">
         {/* Heading + Subheading */}
-        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-          Crafting Purity: <span className="text-orange-500">Our Process</span>, <span className="text-green-600">Your Trust</span>
+  <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-snug">
+          Crafting Purity:{" "}
+          <span className="text-orange-500">Our Process</span>,{" "}
+          <span className="text-green-600">Your Trust</span>
         </h2>
-        <p className="text-gray-800  font-semibold text-lg sm:text-xl mb-8">
-          Follow our journey from nurturing cows to delivering pure happiness at your doorstep.
+  <p className="text-gray-800 font-medium text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl mb-8">
+          Follow our journey from nurturing cows to delivering pure happiness at
+          your doorstep.
         </p>
 
-       
-
-     {/* Image Centered */}
-<div className="flex justify-center">
-  <img
-    src={processImage}
-    alt="Our Process"
-    className="rounded-lg w-full max-w-6xl object-cover" // <-- Increased from max-w-2xl
-  />
-</div>
+        {/* ✅ Image Centered & Responsive */}
+        <div className="flex justify-center">
+          <img
+            src={processImage}
+            alt="Our Process"
+            className="rounded-lg w-full max-w-[95vw] xs:max-w-lg sm:max-w-2xl md:max-w-4xl lg:max-w-6xl object-contain"
+            style={{maxWidth: '100%', height: 'auto'}}
+          />
+        </div>
       </div>
+
+      {/* ✅ Extra Sections */}
       <ExperienceMilcko />
-      <Footer/>
+      <Footer />
     </section>
   );
 };

@@ -1,14 +1,14 @@
 import React from "react";
 
 const ClarificationSection = () => (
-  <section className=" mx-auto px-4 sm:px-6  py-10 my-12 bg-white rounded-3xl shadow-md">
+  <section className=" mx-auto px-4 sm:px-6  py-10 my-12 bg-[#FAF3E8] rounded-3xl shadow-md">
     <div
       className="flex flex-col md:flex-row items-center md:items-stretch gap-10 
       bg-gradient-to-b from-[#FEEFD4] via-[#FDEED3] via-[#E2D9A6] via-[#C2C48A] to-[#9CB179] 
       rounded-2xl p-6 md:p-10"
     >
       {/* Left Content Section */}
-      <div className="flex-1 text-center md:text-left flex flex-col justify-center">
+      <div className="flex-1 text-center  md:text-left flex flex-col justify-center">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-snug">
           Need <span className="text-green-700">Clarification?</span> We’re Here
           for You.

@@ -2,7 +2,7 @@ import React from "react";
 
 const ReturnBottleSteps = () => {
   return (
-    <section className="bg-white py-16 px-10 md:px-10">
+    <section className="bg-white bg-[#FAF3E8] py-16 px-10 md:px-10">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-black leading-tight">
           Returning Your Bottle is <span className="text-[#E99600]">Easy!</span>
