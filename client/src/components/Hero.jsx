@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import videoFile from "../assets/herosection.mp4";
+import videoFile from "../assets/herosection.webm";
 import milkDrop from "../assets/images/milkdrop.png";
 
 const Hero = () => {
