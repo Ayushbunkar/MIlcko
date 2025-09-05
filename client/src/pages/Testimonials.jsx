@@ -64,9 +64,9 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="bg-[#FFFBF3] min-h-screen pt-24">
-      <Navbar />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="bg-[#FFFBF3] min-h-screen pt-10 ">
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -138,7 +138,7 @@ const Testimonials = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full shadow-md"
+            className="bg-yellow-400 mb-10 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full shadow-md"
           >
             Start Your Order
           </motion.button>

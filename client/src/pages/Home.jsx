@@ -11,9 +11,8 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   return (
-    <div className="overflow-x-hidden scrollbar-hide">
-      {/* 🧭 Navigation */}
-      <Navbar />
+    <div className="overflow-x-hidden  ">
+     
 
       {/* 🎥 Hero Section */}
       <Hero />

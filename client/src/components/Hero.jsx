@@ -5,7 +5,7 @@ import milkDrop from "../assets/images/milkdrop.png";
 
 const Hero = () => {
   return (
-    <section className="relative bg-[#FFFBF3] h-screen w-full overflow-hidden">
+    <section className="relative bg-[#FFFBF3] h-screen w-full overflow-hidden top-0">
       {/* 🎥 Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"

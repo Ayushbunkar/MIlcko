@@ -7,8 +7,8 @@ import image7 from '../assets/images/image7.png'; // Ensure this path is correct
 
 function RequestMilkoBanner() {
   return (
-    <div className="bg-[#F5F3EF] font-sans py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
+    <div className="bg-[#FFFBEF] font-sans py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl bg-[#FFFBEF]  mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         
         {/* --- Left Section: Text Content --- */}
         <div className="lg:w-1/2 text-center lg:text-left">

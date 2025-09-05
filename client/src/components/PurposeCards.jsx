@@ -29,14 +29,13 @@ const cardData = [
   },
 ];
 
-// Component
 const PurposeCards = () => {
   return (
-    <section className="bg-[#fff6e5] w-full py-20 px-4">
+    <section className="bg-[#FFFBF3] w-full py-12 sm:py-16 lg:py-20 px-4 sm:px-6 md:px-10 overflow-hidden">
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
-          className="text-4xl sm:text-5xl font-extrabold mb-4"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 leading-snug"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -46,9 +45,9 @@ const PurposeCards = () => {
           <span className="text-yellow-600">Core</span>.
         </motion.h2>
 
-        {/* Subheading Single Line */}
+        {/* Subheading */}
         <motion.p
-          className="text-gray-700 font-semibold text-lg max-w-7xl mx-auto mb-16 whitespace-nowrap overflow-hidden"
+          className="text-gray-700 font-medium text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl mx-auto mb-10 sm:mb-12 leading-relaxed px-2"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -58,7 +57,7 @@ const PurposeCards = () => {
         </motion.p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10">
           {cardData.map((card, index) => (
             <motion.div
               key={index}
@@ -66,20 +65,24 @@ const PurposeCards = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.4 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="relative bg-white rounded-xl shadow-md pt-20 pb-6 px-6 text-center flex flex-col items-center hover:shadow-lg transition duration-300"
+              className="relative bg-white rounded-xl shadow-md pt-16 sm:pt-20 pb-6 px-5 sm:px-6 flex flex-col items-center text-center hover:shadow-lg transition duration-300"
             >
               {/* Floating Icon */}
-              <div className="absolute -top-14 bg-[#fff6e5] p-4 rounded-full shadow-lg">
+              <div className="absolute -top-10 sm:-top-14 bg-[#fff6e5] p-3 sm:p-4 rounded-full shadow-md">
                 <img
                   src={card.icon}
                   alt={card.title}
-                  className="w-24 h-24 object-contain"
+                  className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
                 />
               </div>
 
               {/* Text Content */}
-              <h3 className="text-lg font-semibold mb-2 mt-6">{card.title}</h3>
-              <p className="text-sm text-gray-700">{card.text}</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 mt-6">
+                {card.title}
+              </h3>
+              <p className="text-xs sm:text-sm md:text-base text-gray-700 leading-relaxed">
+                {card.text}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -62,11 +62,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-        isHome && !isScrolled ? "" : "bg-gray-600 shadow-md"
+      className={`w-full  top-0 left-0 z-50 transition-all duration-300  ${
+        isHome && !isScrolled ? "bg-transparent fixed" : "bg-gray-600 shadow-md sticky"
       }`}
     >
-      <div className="max-w-8xl mx-auto flex items-center justify-between w-full h-20 px-4 sm:px-6 md:px-8">
+      <div className="max-w-8xl mx-auto flex items-center justify-between w-full h-15 px-4 sm:px-6 md:px-8">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <motion.img

@@ -5,12 +5,9 @@ import Navbar from '../components/Navbar';
 
 const TermsConditions = () => {
   return (
-    <div className="bg-[#FAF3E8] font-sans mt-10 text-gray-800">
-<div className="mb-15">
-        <Navbar />
-</div>
+    <div className="bg-[#FAF3E8] font-sans  text-gray-800">
       {/* Header Section */}
-      <section className="bg-[#FAF3E8] py-10  text-center border-b border-gray-200">
+      <section className="bg-[#FAF3E8]  text-center border-b border-gray-200">
         <h1 className="text-3xl md:text-4xl font-extrabold text-black mb-3 leading-tight">
           Terms & Conditions
         </h1>

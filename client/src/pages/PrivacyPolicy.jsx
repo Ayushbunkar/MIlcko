@@ -7,11 +7,9 @@ const PrivacyPolicy = () => {
   return (
     <>
     <div className="bg-white font-sans text-black max-w-5xl mx-auto p-4 md:p-8">
-   <div className="mb-15">
-       <Navbar/>
-   </div>
+  
       {/* Privacy Policy Header */}
-      <header className="text-center mb-12 mt-10">
+      <header className="text-center mb-12 ">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-3">
           Privacy Policy
         </h1>

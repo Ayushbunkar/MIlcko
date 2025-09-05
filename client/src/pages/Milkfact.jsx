@@ -9,10 +9,9 @@ import NewsletterSignup from "../components/NewsletterSignup";
 const Milkfact = () => {
   return (
     <>
-      <Navbar />
-
+     
       {/* Milk Fact Section */}
-      <section className="px-4 py-45 bg-[#FAF3E8] flex justify-center items-center">
+      <section className="px-4 pt-10 bg-[#FAF3E8] flex justify-center items-center">
         <div className="flex flex-col md:flex-row-reverse gap-8 md:gap-12 max-w-6xl w-full items-center">
           {/* Left Column - Photo */}
           <div className="flex-1 w-full flex justify-center items-center">

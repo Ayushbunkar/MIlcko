@@ -3,7 +3,7 @@ import welcomeImg from "../assets/images/futureimage.png"; // Update path if nee
 
 const WelcomeBanner = () => {
   return (
-    <section className="bg-[#fff0d9] px-6 py-16">
+    <section className="bg-[#FFFBF3] px px-6 py-16">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
         
         <div className="w-full lg:w-1/3">

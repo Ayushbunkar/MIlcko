@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom"; // Added for navigation
+import { useNavigate } from "react-router-dom";
 import faqImage from "../assets/images/faq.png";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import faqbackground from "../assets/images/faqbackground.png";
 import faqinside from "../assets/images/faqinside.png";
 
-// Fixed category names for consistency
 const faqData = [
   {
     question: "How do I place a new order?",
@@ -105,7 +104,7 @@ const categories = [
 
 const FAQ = () => {
   const [activeCategory, setActiveCategory] = useState("All Questions");
-  const navigate = useNavigate(); // For navigation
+  const navigate = useNavigate();
 
   const filteredFaqs =
     activeCategory === "All Questions"
@@ -114,54 +113,47 @@ const FAQ = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-50">
-        <Navbar />
-      </div>
+      {/* ✅ Navbar */}
+      
 
       <div className="bg-[#FFFBF3] min-h-screen flex flex-col items-center">
-        {/* Hero */}
-        <div className="relative w-full h-48 sm:h-64 md:h-80 lg:h-96 overflow-hidden">
-          {/* Background Image */}
+        {/* ✅ Hero Section */}
+        <div className="relative w-full h-40 sm:h-56 md:h-70 lg:h-55 overflow-hidden">
           <img
             src={faqbackground}
             alt="FAQ Background"
             className="w-full h-full object-cover"
           />
-
-          {/* Overlay Content */}
           <div className="absolute inset-0 flex items-center justify-center">
             <img
               src={faqinside}
               alt="FAQ Inside"
-              className="max-w-[20%] mt-30 h-auto object-contain"
+              className="w-[30%] sm:w-[25%] md:w-[20%] mt-6 lg:w-[15%] h-auto object-contain"
             />
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="w-full pl-20 px-3 py-4 flex flex-col lg:flex-row gap-4">
-          {/* Left Side */}
-          <div className="left-0 w-full lg:w-2/5 space-y-4">
-            {/* Heading */}
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+        {/* ✅ Main Content */}
+        <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col lg:flex-row gap-6">
+          {/* ✅ Left Section */}
+          <div className="w-full lg:w-2/5 space-y-4">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900">
               Have <span className="text-green-600">Questions</span>? We’ve Got
               Answers.
             </h2>
-
-            {/* Subheading */}
             <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
               Explore our frequently asked questions to learn more about our
               products, services, and partnerships.
             </p>
 
-            {/* Categories - Desktop */}
+            {/* Categories (Desktop) */}
             <div className="hidden lg:block">
               <div className="flex flex-wrap gap-2">
                 {categories.map((category, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveCategory(category)}
-                    className={`px-4 py-2 rounded-full text-sm transition ${
+                    className={`px-3 py-1.5 rounded-full text-sm transition ${
                       activeCategory === category
                         ? "bg-black text-white font-semibold"
                         : "bg-gray-100 text-gray-700 hover:bg-yellow-100"
@@ -174,7 +166,7 @@ const FAQ = () => {
             </div>
 
             {/* Support Box */}
-            <div className="mt-4">
+            <div className="mt-4 bg-white p-4 rounded-lg shadow-sm border border-gray-200">
               <p className="text-gray-800 font-semibold text-sm">
                 Need More Info?
               </p>
@@ -182,7 +174,7 @@ const FAQ = () => {
                 Couldn’t find what you were looking for? We’ve got answers.
               </p>
               <button
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-sm px-5 py-2.5 rounded-full shadow-md transition"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-sm px-5 py-2.5 rounded-full shadow-md transition w-full sm:w-auto"
                 onClick={() => navigate("/contact-us")}
               >
                 Contact Support
@@ -190,16 +182,16 @@ const FAQ = () => {
             </div>
           </div>
 
-          {/* Right Side */}
-          <div className="w-full lg:w-3/5 space-y-2">
-            {/* Categories Mobile */}
+          {/* ✅ Right Section */}
+          <div className="w-full lg:w-3/5 space-y-3">
+            {/* Categories (Mobile) */}
             <div className="block lg:hidden mb-2">
-              <div className="flex flex-wrap gap-1">
+              <div className="flex flex-wrap gap-2">
                 {categories.map((category, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveCategory(category)}
-                    className={`px-2 py-1 rounded-full text-xs ${
+                    className={`px-3 py-1 rounded-full text-xs sm:text-sm ${
                       activeCategory === category
                         ? "bg-yellow-400 text-black font-semibold"
                         : "bg-gray-200 text-gray-700 hover:bg-yellow-100"
@@ -210,6 +202,7 @@ const FAQ = () => {
                 ))}
               </div>
             </div>
+
             {/* FAQ List */}
             {filteredFaqs.map((item, index) => (
               <motion.div
@@ -217,12 +210,12 @@ const FAQ = () => {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
-                className="bg-white border border-gray-200 rounded-md p-3 shadow-sm"
+                className="bg-white border border-gray-200 rounded-md p-4 shadow-sm"
               >
-                <p className="text-gray-800 text-sm font-medium">
+                <p className="text-gray-800 text-sm sm:text-base font-medium">
                   {item.question}
                 </p>
-                <p className="mt-2 text-gray-600 text-xs leading-snug border-t border-gray-100 pt-2">
+                <p className="mt-2 text-gray-600 text-xs sm:text-sm leading-snug border-t border-gray-100 pt-2">
                   {item.answer}
                 </p>
               </motion.div>
@@ -230,8 +223,8 @@ const FAQ = () => {
           </div>
         </div>
 
-        {/* Footer Small */}
-        <div className="w-full mt-4">
+        {/* ✅ Footer */}
+        <div className="w-full mt-6">
           <Footer />
         </div>
       </div>

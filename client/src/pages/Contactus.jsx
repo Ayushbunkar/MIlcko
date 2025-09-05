@@ -49,27 +49,28 @@ const Contactus = () => {
 
   return (
     <>
-      <div className="mt-20 bg-[#FFFBF3] mt-5  min-h-screen px-4 sm:px-6 lg:px-8 overflow-x-hidden">
-        <Navbar />
+      <div className="bg-[#FFFBF3] min-h-screen px-4 sm:px-6 lg:px-8 overflow-x-hidden">
+       
 
         {/* Main Content */}
-        <div className="max-w-7xl mx-auto  sm:mt-1 md:mt-7">
+        <div className="max-w-7xl mx-auto mt-10 sm:mt-16 md:mt-3">
           {/* Heading Section */}
           <div className="text-center mb-8 sm:mb-10 md:mb-12 px-4">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
               Fresh <span className="text-green-600">Support</span>, Just Like
               Our <span className="text-yellow-500">Milk!</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-700 font-extrabold mt-3 sm:mt-2 mx-auto leading-relaxed whitespace-nowrap overflow-x-auto">
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 font-medium mt-3 sm:mt-2 mx-auto max-w-2xl leading-relaxed">
               For any inquiries or assistance, connect with us directly—we're
               here to provide the support you need.
             </p>
           </div>
+
           {/* Form and Image Container */}
-          <div className="flex flex-col -mt-8  lg:flex-row items-center justify-between gap-8 sm:gap-10 lg:gap-12">
+          <div className="flex flex-col-reverse lg:flex-row items-center -mt-10 justify-between gap-8 sm:gap-10 lg:gap-12">
             {/* Contact Form */}
-            <div className="bg-white w-[380px] h-[448px] mb-13 mx-auto p-2 pb-10 shadow-md rounded-xl border border-amber-200">
-              <h2 className="text-lg font-semibold mb-5 text-gray-800">
+            <div className="bg-white w-full max-w-md sm:max-w-lg md:max-w-md lg:max-w-sm xl:max-w-md mx-auto p-6 shadow-md rounded-xl border border-amber-200">
+              <h2 className="text-lg sm:text-xl font-semibold mb-5 text-gray-800 text-center lg:text-left">
                 Get in Touch!
               </h2>
 
@@ -106,12 +107,12 @@ const Contactus = () => {
                 />
 
                 {/* Phone */}
-                <div className="flex gap-3">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <select
                     name="countryCode"
                     value={formData.countryCode}
                     onChange={handleChange}
-                    className="p-3 border rounded-full text-sm w-1/4 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                    className="p-3 border rounded-full text-sm sm:w-1/4 focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                   >
                     <option value="+91">+91</option>
                     <option value="+1">+1</option>
@@ -154,17 +155,17 @@ const Contactus = () => {
                 </p>
               </form>
 
-              {/* Contact Info OUTSIDE the form */}
-              <div className="w-full mt-  justify-between text-xs flex flex-col sm:flex-row  items-center ">
+              {/* Contact Info */}
+              <div className="w-full mt-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs">
                 <div className="flex items-center">
                   <img
-                    src={email} // <-- import your icon at the top
+                    src={email}
                     alt="email icon"
                     className="w-4 h-4 mr-1"
                   />
                   <a
                     href="mailto:milckofficial@gmail.com"
-                    className="underline mt-1 hover:text-green-600 transition-colors"
+                    className="underline hover:text-green-600 transition-colors"
                   >
                     milckofficial@gmail.com
                   </a>
@@ -172,13 +173,13 @@ const Contactus = () => {
 
                 <div className="flex items-center">
                   <img
-                    src={call} 
+                    src={call}
                     alt="phone icon"
-                    className="w-4 h-4  mr-1"
+                    className="w-4 h-4 mr-1"
                   />
                   <a
                     href="tel:+917567618996"
-                    className="underline mt-1 hover:text-green-600 transition-colors"
+                    className="underline hover:text-green-600 transition-colors"
                   >
                     +91 75676 18196
                   </a>
@@ -186,12 +187,12 @@ const Contactus = () => {
               </div>
             </div>
 
-          
-            <div className="w-full mt-6 max-w-lg lg:max-w-2xl flex items-center justify-center order-first lg:order-last">
+            {/* Support Image */}
+            <div className="w-full max-w-lg pt-9 lg:max-w-2xl flex items-center justify-center">
               <img
                 src={supportImage}
                 alt="Support Illustration"
-                className="w-full h-auto object-cover max-h-[400px] sm:max-h-[450px] md:max-h-[500px] rounded-lg shadow-md"
+                className="w-full h-auto object-cover max-h-[350px] sm:max-h-[400px] md:max-h-[500px] rounded-lg shadow-md"
               />
             </div>
           </div>

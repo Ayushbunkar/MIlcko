@@ -10,7 +10,7 @@ function OurFarms() {
     <>
       {/* Hero Section */}
       <section className="relative w-full h-screen font-sans bg-[#FFFBF3] text-white">
-        <div className='mb-15'>   <Navbar/></div>
+    
         {/* Background Image */}
         <img
           src={farmBackgroundImageUrl}

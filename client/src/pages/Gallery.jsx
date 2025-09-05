@@ -55,8 +55,8 @@ function Gallery() {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-[#FEF0D5] to-[#FEF0D500] font-sans py-16 px-4 sm:px-6 lg:px-8">
-        <div className='mb-15'><Navbar/></div>
+      <div className="bg-gradient-to-r from-[#FEF0D5] to-[#FEF0D500] font-sans py-10 px-4 sm:px-6 lg:px-8">
+        
         <div className="max-w-7xl mx-auto">
           {/* Heading and Description */}
           <div className="text-center mb-12">

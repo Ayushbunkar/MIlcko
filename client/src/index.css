@@ -4,3 +4,13 @@ body {
   padding: 0;
   font-family: 'Inter', sans-serif;
 }
+
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}

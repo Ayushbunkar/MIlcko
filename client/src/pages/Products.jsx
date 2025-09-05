@@ -67,10 +67,10 @@ const Products = () => {
   return (
 	<>
     <div className="min-h-screen bg-[#FFFBF3]">
-      <Navbar />
+     
       
       {/* Page Header */}
-      <div className="pt-28 pb-10 px-4 bg-gradient-to-r from-green-50 to-yellow-50">
+      <div className=" pb-5 px-4 bg-gradient-to-r scrollbar-hide from-green-50 to-yellow-50">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             Our <span className="text-green-600">Fresh</span> Products
@@ -82,7 +82,7 @@ const Products = () => {
       </div>
 
       {/* Products Grid */}
-      <div className="max-w-7xl mx-auto py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-1 sm:py-0 px-2 sm:px-1 lg:px-5">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
           {demoProducts.map((product) => (
             <ProductCard
@@ -95,12 +95,12 @@ const Products = () => {
       </div>
 
       {/* Features Section */}
-      <div className="bg-white py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+      <div className="bg-white py-12 sm:py-10 px-8 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-8 sm:mb-12">
             Why Choose Our Products?
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-8">
             <div className="text-center p-6 bg-green-50 rounded-lg">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚜</span>

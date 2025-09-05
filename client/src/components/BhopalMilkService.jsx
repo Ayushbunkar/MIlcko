@@ -10,7 +10,7 @@ import image4 from '../assets/images/image4.png';
 
 function BhopalMilkService() {
   return (
-    <div className="bg-[#F5F3EF] font-sans py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#FFFBEF] font-sans py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         
         {/* --- Heading Section --- */}
