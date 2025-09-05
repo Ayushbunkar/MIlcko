@@ -14,12 +14,12 @@ import bgwave from "../assets/images/bgwave.png";
 const CareersSection = () => {
   return (
     <>
-      {/* Hero Section */}
+      {/* Hero Section  ffs*/}
       <section
         className="relative w-full -mt-7 h-screen bg-no-repeat bg-center bg-contain overflow-hidden"
         style={{
           backgroundImage: `url(${bgwave})`,
-          backgroundSize: "1540px 694px", // 👈 custom bg size
+          backgroundSize: "1540px 694px", // 
         }}
       >
         {/* Cream background behind content but above bgwave */}
